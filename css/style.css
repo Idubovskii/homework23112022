@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Hind Siliguri';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/hind-siliguri-v12-latin/hind-siliguri-v12-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+        url('../fonts/hind-siliguri-v12-latin/hind-siliguri-v12-latin-regular.eot') format('embedded-opentype'), /* IE6-IE8 */
+        url('../fonts/hind-siliguri-v12-latin/hind-siliguri-v12-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+        url('../fonts/hind-siliguri-v12-latin/hind-siliguri-v12-latin-regular.woff') format('woff'), /* Modern Browsers */
+        url('../fonts/hind-siliguri-v12-latin/hind-siliguri-v12-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+        url('../fonts/hind-siliguri-v12-latin/hind-siliguri-v12-latin-regular.svg') format('svg'); /* Legacy iOS */
+}
+
+
+/* Первый блок*/
+.imga{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.parent {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    counter-reset: numbers
+}
+.block {
+    position: relative;
+    min-height: 300px;
+    width: 30%;
+    border: 1px solid #000;
+}
+.block::after {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    counter-increment: numbers;
+    content: counter(numbers);
+}
